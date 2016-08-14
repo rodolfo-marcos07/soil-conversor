@@ -1,0 +1,19 @@
+/* Empty. Add your own CSS if you like */
+.pane{
+	background: #BCAAA4 !important;
+}
+.item-input{
+	background: #fff !important;
+}
+.button.button-positive{
+	background: #4CAF50 !important;
+}
+.button.button-positive.active,.button.button-positive.activated{
+	background: #1B5E20 !important;
+}
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
+    color: #4CAF50 !important;
+}
+.copyHistorico{
+	float: right;
+}

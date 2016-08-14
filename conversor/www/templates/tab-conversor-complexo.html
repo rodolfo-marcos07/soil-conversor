@@ -1,0 +1,57 @@
+<ion-view view-title="Conversor Macronutriente">
+<ion-content>
+<div class="content padding">
+	<div class="list">
+		<label class="item item-input item-select">
+			<div class="input-label">
+				Macronutriente
+			</div>
+			<select ng-model="opcao.elemento" ng-options="item.elemento for item in opcoes" ng-change="elementoChange()"></select>
+		</label>
+		<div class="card">
+			<div class="item item-text-wrap">
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Entrada</span>
+					<input type="number" ng-model="dados.entrada">
+				</label>
+				<label class="item item-input item-select">
+					<div class="input-label">
+						Unidade
+					</div>
+					<select ng-model="opcao.de" ng-options="item.nome for item in opcao.elemento.valores"></select>
+				</label>
+
+				<label class="item item-input item-select">
+					<div class="input-label">
+						Converter para
+					</div>
+					<select ng-model="opcao.para" ng-options="item.nome for item in opcao.elemento.valores"></select>
+				</label>
+
+			</div>
+		</div>
+
+		<button class="button button-full button-positive" ng-click="converter()">
+			Converter
+		</button>
+
+		<label class="item item-input item-stacked-label resultado">
+			<span class="input-label">Resultado</span>
+			<input type="text" readonly="true" ng-model="dados.saida">
+		</label>
+
+		<div class="card">
+			<div class="item item-divider">
+				Histórico
+				<button class="ion-clipboard copyHistorico" ng-click="copiarHistorico()">
+				<button class="ion-trash-b copyHistorico" ng-click="limparHistorico()"></button>
+				</button>
+			</div>
+			<div class="item item-text-wrap">
+				<p ng-repeat="h in historico track by $index">{{h}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+</ion-content>
+</ion-view>
