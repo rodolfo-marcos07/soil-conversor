@@ -1,0 +1,8 @@
+Instalar Node
+Instalar Ionic
+Instalar JRE e JDK
+Instalar Android Studio
+
+: ionic serve (Browser)
+: ionic add platform android
+: inoic build android (.apk)
